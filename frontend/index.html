@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CloudPulse Professional Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+</head>
+<body>
+<header>
+    <h1>☁️ CloudPulse Dashboard</h1>
+</header>
+
+<main>
+    <!-- Top Metrics Cards -->
+    <section class="cards-grid">
+        <div class="card">
+            <div class="card-header"><span>CPU Usage</span></div>
+            <div class="card-body">
+                <div class="bar-bg"><div id="cpu" class="bar-fill"></div></div>
+                <span id="cpu-text" class="metric-text">0%</span>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header"><span>Memory Usage</span></div>
+            <div class="card-body">
+                <div class="bar-bg"><div id="memory" class="bar-fill"></div></div>
+                <span id="memory-text" class="metric-text">0%</span>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header"><span>Storage Usage</span></div>
+            <div class="card-body">
+                <div class="bar-bg"><div id="storage" class="bar-fill"></div></div>
+                <span id="storage-text" class="metric-text">0%</span>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header"><span>Network Usage</span></div>
+            <div class="card-body">
+                <div class="bar-bg"><div id="network" class="bar-fill"></div></div>
+                <span id="network-text" class="metric-text">0%</span>
+            </div>
+        </div>
+        <div class="card cost-card">
+            <div class="card-header"><span>Estimated Cost</span></div>
+            <div class="card-body">
+                <span id="cost-text" class="metric-text">$0.00</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Historical Metrics Chart -->
+    <section class="chart-panel">
+        <canvas id="metricsChart"></canvas>
+    </section>
+</main>
+
+<footer>
+    <p>CloudPulse &copy; 2025 | Professional Cloud Dashboard Simulation</p>
+</footer>h
+
+<script src="script.js"></script>
+</body>
+</html>

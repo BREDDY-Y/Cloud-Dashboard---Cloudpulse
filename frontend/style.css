@@ -1,0 +1,29 @@
+/* General */
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Roboto', sans-serif; }
+body { background: #1f2733; color: #fff; }
+header { text-align: center; padding: 20px; font-size: 2em; font-weight: 700; background: #121b22; }
+footer { text-align: center; padding: 10px; font-size: 0.9em; color: #aaa; background: #121b22; }
+
+/* Cards Grid */
+.cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; padding: 20px; }
+.card { background: #232f3e; border-radius: 12px; padding: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.5); transition: transform 0.3s; }
+.card:hover { transform: translateY(-5px); }
+.card-header { font-weight: 700; margin-bottom: 10px; color: #e7e7e7; }
+.card-body { display: flex; flex-direction: column; align-items: flex-end; }
+.metric-text { font-weight: bold; font-size: 1.2em; margin-top: 5px; color: #00ffb0; }
+
+/* Bars */
+.bar-bg { width: 100%; height: 18px; background: rgba(255,255,255,0.1); border-radius: 9px; overflow: hidden; }
+.bar-fill { height: 100%; width: 0%; background: linear-gradient(90deg,#00f260,#0575e6); border-radius: 9px; transition: width 1s ease-in-out; }
+
+/* Cost Card */
+.cost-card .metric-text { font-size: 2em; color: #ffd700; text-align: center; }
+
+/* Chart Panel */
+.chart-panel { background: #232f3e; border-radius: 12px; padding: 20px; margin: 20px; }
+canvas { width: 100% !important; height: 400px !important; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cards-grid { grid-template-columns: 1fr; }
+}
