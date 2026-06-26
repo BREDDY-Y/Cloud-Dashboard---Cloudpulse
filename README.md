@@ -64,8 +64,9 @@ JSON
   "total_cost": 314.12
 }
 
+---
 
-**Relational Storage Schema Setup**
+## Relational Storage Schema Setup
 The application natively handles state tracking initialization on startup, constructing the relational database footprint inside metrics.db:
 SQL
 CREATE TABLE IF NOT EXISTS metrics (
@@ -78,9 +79,9 @@ CREATE TABLE IF NOT EXISTS metrics (
     timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
-
- **Project Directory Structure**
-
+---
+ ## Project Directory Structure
+ 
  CloudPulse/
 │
 ├── backend/
@@ -94,8 +95,7 @@ CREATE TABLE IF NOT EXISTS metrics (
     ├── index.html              # Responsive glassmorphic tracking UI layout
     ├── script.js               # Async API worker mechanism & Chart.js graph loop
     └── style.css               # Core presentation styles & canvas theme parameters
-
-
+---
 
 **Local Environment Bootstrap (Zero to Live)**
 Prerequisites
@@ -108,13 +108,16 @@ cd backend
 pip install Flask Flask-CORS pandas
 python app.py
 The microservice backend daemon will initialize, binding natively on loopback proxy socket channel: http://127.0.0.1:5000.
+---
 
-**Launch Client Interface Dashboard** 
+## Launch Client Interface Dashboard
  To eliminate local asset cross-origin security execution errors (CORS block policies) when fetching asynchronous data directly via local filesystems, launch a light web server directly inside the frontend terminal layer:
  Bash/terminal
  cd ../frontend
 python -m http.server 5000
 Open a browser client page and target your tracking dashboard portal view at: http://127.0.0.1:5000
+
+---
 
 **Applied FinOps Operational Logic**
  Calculated spending matrices match linear capacity distribution thresholds computed programmatically across active usage parameters:
